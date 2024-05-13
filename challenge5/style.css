@@ -1,0 +1,151 @@
+@font-face {
+  font-family: Istok_Web;
+  src:url(../typografie/Istok_Web/IstokWeb-Bold.ttf);
+  src:url(../typografie/Istok_Web/IstokWeb-Regular.ttf);
+
+}
+
+body {
+  font-family: Istok_Web;
+  background-color: rgb(236, 229, 220);
+  margin: 2em;
+  color: blueviolet;
+}
+  
+  #map {
+    height: 280px;
+    width: 100%;
+  }
+  
+  header {
+    text-align: center;
+    
+  }
+  
+  
+  
+  header a.link {
+    display: block;
+    margin: 1em;
+  }
+  
+  a {
+    color: #fff;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a.btn {
+    color: #6e069f;
+    border: 1px solid #6e069f;
+    padding: 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 3px;
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  a.btn:hover {
+    color: #6e069f;
+    background-color: #c9afd7;
+  
+  }
+  
+  #feedback {
+    font-weight: bold;
+  }
+
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flex1{
+    margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flex1 a{
+    margin-bottom: 20px;
+  }
+  .flex a{
+    margin-bottom: 20px;
+  }
+  #result-container {
+    margin-top: 20px;
+    padding: 10px;
+  
+  }
+
+
+#answer-buttons {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.answer-button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #c9afd7;
+  border: 1px solid #c9afd7;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answer-button:hover {
+  background-color: #a58bbf;
+  border-color: #a58bbf;
+}
+
+  
+
+  @media only screen and (min-width: 600px) {
+    .buttons {
+      display: block;
+    }
+  
+  
+  
+    header,
+    section.map-section {
+  
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+    }
+  
+    #map {
+      /* width: 600px; */
+      height: 60vw;
+      max-height: 70vh;
+    }
+
+    .flex a{
+       margin-left: 90px;
+    }
+
+    .flex1 a{
+      margin-left: 90px;
+   }
+  }
+
+  
+  @media only screen and (min-width: 1000px) {
+
+    .flex1 a{
+      margin-left: 130px;
+   }
+    
+    .flex a{
+        margin-left: 130px;
+     }
+  }

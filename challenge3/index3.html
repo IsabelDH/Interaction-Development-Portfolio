@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition app</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
+    <script src="dist/webcam-easy.js"></script> 
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="load">Classify</h1>
+        <p>Take a picture and find out what your pc thinks the object is!</p>
+    
+        <main id="webcam-app">
+            
+            <div class="wrapper">
+                <video id="webcam" autoplay playsinline></video>
+              </div>
+            <a href="#" id="take-photo" title="Take Photo">Take a picture</a>        
+            <div id="result">
+                <h2 id="resultText"></h2>
+            </div>
+                    
+        
+        </main>
+    </div>
+    <!-- <script src='js/camera.js'></script> -->
+    <script src="js/camera.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+@font-face {
+  font-family: Istok_Web;
+  src:url(../typografie/Istok_Web/IstokWeb-Bold.ttf);
+  src:url(../typografie/Istok_Web/IstokWeb-Regular.ttf);
+
+}
+body {
+  margin: 0;
+  font-family: Istok_Web;
+  background-color: rgb(236, 229, 220);
+}
+
+.load{
+  text-align: center;
+  color: blueviolet;
+}
+
+p{
+  text-align: center;
+  margin-left: 30px;
+  color: rgb(157, 58, 187);
+  margin-right: 30px;
+}
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36vh; 
+}
+
+#webcam {
+  width: 100%; 
+  max-width: 400px; 
+  height: auto; 
+  border-radius: 20px;
+  margin: 5px auto; 
+}
+
+
+#take-photo {
+  display: block; 
+  width: 80%; 
+  max-width: 300px; 
+  margin: 5px auto; 
+  padding: 10px; 
+  font-size: 16px;
+  text-align: center; 
+  text-decoration: none;
+  color: white;
+  background-color: #562285;
+  border-radius: 5px;
+}
+
+
+#webcam-app {
+  border: #562285 solid 4px;
+  border-radius: 20px;
+  padding: 10px; 
+  margin: 5px auto; 
+  max-width: 600px; 
+}
+
+@media (max-width: 768px) {
+  #webcam-app {
+    padding: 5px; 
+   
+  }
+
+
+}
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Find the challenge!</h1>
+    <p>Find a challenge and answer the question!</p>
+    <div class="flex1">
+        <a class="btn" id="btn-find-me1">Find challenge 1</a>
+        <a class="btn" id="btn-find-me2">Find challenge 2</a>
+        <a class="btn" id="btn-find-me3">Find challenge 3</a>
+        <a class="btn" id="btn-find-me4">Find challenge 4</a>
+        <a class="btn" id="btn-find-me5">Find challenge 5</a>
+    </div>
+  
+    <div id="question">
+      <h2 id="questionText"></h2>
+    </div>
+
+    <div id="answer-buttons" class="flex"></div>
+
+    
+    <div id="result-container">
+      <p id="result-message"></p>
+    </div>
+  </header>
+  
+  <section class="map-section">
+    <div id="map"></div>
+  </section>
+
+</body>
+</html>
