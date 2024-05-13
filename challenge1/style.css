@@ -6,16 +6,20 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
     height: 100vh;
     margin: 0;
     background-color: rgb(236, 229, 220);
     color:  #6e069f;
     font-family: Istok_Web;
    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
   button {
@@ -104,7 +108,7 @@ a{
   display: flex;
   justify-content:space-between;
   align-items: center; 
-  background-color: #334B35;
+  background-color: #6e069f;
   padding-bottom: 12px;
 
 }

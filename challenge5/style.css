@@ -8,23 +8,23 @@
 body {
   font-family: Istok_Web;
   background-color: rgb(236, 229, 220);
-  margin: 2em;
+  margin: 0;
   color: blueviolet;
 }
-  
+
   #map {
     height: 280px;
     width: 100%;
   }
   
-  header {
+  main {
     text-align: center;
     
   }
   
   
   
-  header a.link {
+  main a.link {
     display: block;
     margin: 1em;
   }
@@ -60,25 +60,23 @@ body {
     font-weight: bold;
   }
 
-  .flex{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .flex1{
-    margin-left: 30px;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  .flex,
+.flex1 {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px; 
+}
 
   .flex1 a{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-  .flex a{
-    margin-bottom: 20px;
-  }
+
   #result-container {
     margin-top: 20px;
-    padding: 10px;
+    padding: 5px;
   
   }
 
@@ -105,8 +103,28 @@ body {
   background-color: #a58bbf;
   border-color: #a58bbf;
 }
-
+a{
+  text-decoration: none;
+  color: #F4FFF3;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-right: 0; 
+  margin-left: 20px;
+  margin-top: 20px;
   
+  }
+  
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6e069f;
+    padding-bottom: 12px;
+    width: 100%; 
+  }
+  
+
 
   @media only screen and (min-width: 600px) {
     .buttons {
@@ -115,7 +133,7 @@ body {
   
   
   
-    header,
+    main,
     section.map-section {
   
       margin-left: auto;
@@ -124,28 +142,11 @@ body {
     }
   
     #map {
-      /* width: 600px; */
+
       height: 60vw;
       max-height: 70vh;
     }
 
-    .flex a{
-       margin-left: 90px;
-    }
-
-    .flex1 a{
-      margin-left: 90px;
-   }
   }
 
   
-  @media only screen and (min-width: 1000px) {
-
-    .flex1 a{
-      margin-left: 130px;
-   }
-    
-    .flex a{
-        margin-left: 130px;
-     }
-  }

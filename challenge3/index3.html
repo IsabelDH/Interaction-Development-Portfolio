@@ -12,11 +12,17 @@
     
 </head>
 <body>
-    <div class="container">
+    <header>
+        <nav class="navbar">
+          <a class="logo" href="../index.html"><img width="80px" src="/images/logo.png" alt=""></a>
+      </nav>
+    </header>
+    <main>
+       <div class="container">
         <h1 class="load">Classify</h1>
         <p>Take a picture and find out what your pc thinks the object is!</p>
     
-        <main id="webcam-app">
+        <div id="webcam-app">
             
             <div class="wrapper">
                 <video id="webcam" autoplay playsinline></video>
@@ -24,12 +30,12 @@
             <a href="#" id="take-photo" title="Take Photo">Take a picture</a>        
             <div id="result">
                 <h2 id="resultText"></h2>
-            </div>
-                    
+            </div> 
         
-        </main>
-    </div>
-    <!-- <script src='js/camera.js'></script> -->
+         </div>
+        </div> 
+    </main>
+
     <script src="js/camera.js"></script>
 </body>
 </html>

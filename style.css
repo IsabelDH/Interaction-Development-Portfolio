@@ -72,9 +72,12 @@ a{
   }
 
   .flex1{
-    margin-left: 30px;
     display: flex;
+    justify-content: center; 
     flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; 
   }
 
   @media only screen and (min-width: 1000px) {

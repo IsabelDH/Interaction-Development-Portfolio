@@ -10,11 +10,18 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin=""></script>
+  <link rel="stylesheet" href="../normalize.css">
   <link rel="stylesheet" href="style.css">
-  <script defer src="main.js"></script>
+
+  
 </head>
 <body>
   <header>
+      <nav class="navbar">
+        <a class="logo" href="../index.html"><img width="80px" src="/images/logo.png" alt=""></a>
+    </nav>
+  </header>
+  <main>
     <h1>Find the challenge!</h1>
     <p>Find a challenge and answer the question!</p>
     <div class="flex1">
@@ -35,11 +42,13 @@
     <div id="result-container">
       <p id="result-message"></p>
     </div>
-  </header>
+ 
   
   <section class="map-section">
     <div id="map"></div>
   </section>
+</main>
 
+<script src="main.js"></script>
 </body>
 </html>

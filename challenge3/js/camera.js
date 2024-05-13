@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateImagePosition() {
         let image = canvasElement;
         if (window.innerWidth <= 680) {
-            image.style.top = "95vh"; 
+            image.style.top = "115vh"; 
         } else {
            
-            image.style.top = "95vh"; 
+            image.style.top = "110vh"; 
         }
     }
 
