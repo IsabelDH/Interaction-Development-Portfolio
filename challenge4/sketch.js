@@ -1,3 +1,5 @@
+document.querySelector('#motion').onclick = requestMotionPermission;
+
 let ball;
 let deltaX, deltaY;
 const w = window.innerWidth;
@@ -9,7 +11,7 @@ let round = 1;
 
 function setup() {
   createCanvas(w, h);
-  ball = new Ball(beginX, beginY, 25, "  #6e069f");
+  ball = new Ball(beginX, beginY, 85, "  #6e069f");
 }
 
 function draw() {

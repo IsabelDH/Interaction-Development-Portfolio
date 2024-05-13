@@ -34,6 +34,7 @@ function requestMotionPermission() {
     } else if (isMobile) {
         alert("This is an Android device");
         window.addEventListener('devicemotion', evt => {
+            console.log('Device motion detected:', evt);
             if (initialOffset === null && evt.absolute !== true && +evt.webkitCompassAccuracy > 0 && +evt.webkitCompassAccuracy < 50) {
                 initialOffset = evt.webkitCompassHeading || 0;
             } else if (initialOffset === null) {
