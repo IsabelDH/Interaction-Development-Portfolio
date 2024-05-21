@@ -1,12 +1,39 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(236, 229, 220);
-  }
-  canvas {
-    display: block;
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#motion{
+  position:absolute;
+  height:3vh; 
+}
+
+#start {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color:#6e069f;
+  border: 3px solid #6e069f;
+  color: #d9c9e1; 
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+#start:hover{
+  color: #6e069f;
+  background-color: #d9c9e1;
+}
   
-  }
   a{
     text-decoration: none;
     color: #F4FFF3;
