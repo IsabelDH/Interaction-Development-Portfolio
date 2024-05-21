@@ -31,9 +31,8 @@ p{
 
 
 /*navigatie*/
-a{
+.logo img{
     text-decoration: none;
-    color: #F4FFF3;
     text-transform: uppercase;
     font-size: 14px;
     margin-right: 0; 
@@ -54,8 +53,6 @@ a{
 
 .challenge {
     color: #6e069f;
-    border: 1px solid #6e069f;
-    padding: 0.5em;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 3px;
@@ -63,13 +60,37 @@ a{
     text-align: center;
     font-weight: bold;
     cursor: pointer;
+    padding-bottom: 10px;
+    padding-top: 20px;
   }
-  
-  .challenge:hover {
-    color: #d9c9e1;
-    background-color: #8d24c5;
-  
+  .div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #6e069f;
+    border-radius: 20px;
+    max-width: 90%;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 20px;
+}
+
+
+.div:hover {
+    background-color: #8d24c5; 
+}
+
+.div:hover .challenge {
+    color: #d9c9e1; 
+}
+
+
+  .div img{
+    width: 80%;
+    padding-bottom: 20px;
+    cursor: pointer;
+
   }
+
 
   .flex1{
     display: flex;
@@ -81,6 +102,27 @@ a{
     max-width: 800px; 
   }
 
+  .footer{
+    background-color: #8d24c5;
+    padding-bottom: 3px;
+    padding-top: 10px;
+}
+
+.end{
+    color: #F4FFF3;
+}
+  @media (max-width: 768px) {
+    .div{
+        margin-right: 20px;
+    }
+  }
+  @media (max-width: 909px) {
+    .div{
+        margin-right: 30px;
+    }
+  
+   
+  }
  
 
 
