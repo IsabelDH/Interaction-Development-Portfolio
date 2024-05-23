@@ -1,23 +1,28 @@
-const questions = [
+let questions = [
     { question: "What is 2 + 2?", answer: "Four" },
     { question: "How many liters of water should you drink per day?", answer: "Two" },
     { question: "Where is Disneyland located in Europe?", answer: "Paris" },
     { question: "What is the capital of Belgium?", answer: "Brussels" },
+    { question: "What is the capital of Germany?", answer: "Berlin" },
+    { question: "How many continents are there?", answer: "Seven" },
+    { question: "Who painted the Mona Lisa?", answer: "Leonardo da Vinci" }
+    
 ];
 
 let currentQuestionIndex = 0;
 
-const questionElement = document.querySelector('#question');
-const resultElement = document.querySelector('#result');
-const speakQuestionButton = document.querySelector('#speakQuestionButton');
-const answerButton = document.querySelector('#answerButton');
-const nextButton = document.querySelector('#nextButton');
+let questionElement = document.querySelector('#question');
+let resultElement = document.querySelector('#result');
+let speakQuestionButton = document.querySelector('#speakQuestionButton');
+let answerButton = document.querySelector('#answerButton');
+let nextButton = document.querySelector('#nextButton');
+let replayButton = document.querySelector('#replayButton');
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
+let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recognition = new SpeechRecognition();
 recognition.lang = 'en-US';
 
-const synth = window.speechSynthesis;
+let synth = window.speechSynthesis;
 let utterance = new SpeechSynthesisUtterance();
 utterance.lang = 'en-US';
 utterance.pitch = 1.2;
@@ -38,11 +43,11 @@ answerButton.addEventListener('click', function() {
 });
 
 recognition.onresult = function(event) {
-    const answer = event.results[0][0].transcript.trim().toLowerCase();
-    const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
+    let answer = event.results[0][0].transcript.trim().toLowerCase();
+    let correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
     if (answer === correctAnswer) {
         resultElement.textContent = 'Correct🎆!';
-        resultElement.style.color = "#6e069f";
+        resultElement.style.color = "green";
         resultElement.style.fontSize = "38px";
         nextButton.style.display = 'inline-block';
         speakQuestionButton.style.display = 'none';
@@ -50,7 +55,7 @@ recognition.onresult = function(event) {
         questionElement.style.display = 'none';
     } else {
         resultElement.textContent = 'Wrong! Try again.';
-        resultElement.style.color = "black";
+        resultElement.style.color = "red";
         resultElement.style.fontSize = "38px";
         nextButton.style.display = 'none';
         answerButton.disabled = false;
@@ -67,15 +72,26 @@ nextButton.addEventListener('click', function() {
         questionElement.style.display = 'inline-block';
         nextButton.style.display = 'none';
     } else {
-        questionElement.textContent = 'Good job! The quiz is finished!!!';
-        questionElement.style.color = "#6e069f";
         speakQuestionButton.disabled = true;
         answerButton.disabled = true;
         nextButton.style.display = 'none';
+        replayButton.style.display = 'inline-block';
     }
 });
 
-
+replayButton.addEventListener('click', function() {
+    currentQuestionIndex = 0;
+    resultElement.textContent = '';
+    questionElement.textContent = 'Good job! The quiz is finished!!!';
+    questionElement.style.color = "#6e069f";
+    speakQuestionButton.style.display = 'inline-block';
+    answerButton.style.display = 'inline-block';
+    questionElement.style.display = 'inline-block';
+    nextButton.style.display = 'none';
+    replayButton.style.display = 'none';
+    speakQuestionButton.disabled = false;
+    answerButton.disabled = true;
+});
 questionElement.textContent = questions[currentQuestionIndex].question;
 speakQuestionButton.disabled = false;
 answerButton.disabled = true;
