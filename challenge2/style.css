@@ -12,43 +12,48 @@ body {
   font-family: Istok_Web;
 }
 main{
-display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+h1{
+    color: #72179c;
+    text-align: center;
+    margin-bottom: -20px;
 
+}
 h2{
-color: #72179c;
-text-align: center;
+    color: #72179c;
+    text-align: center;
 
 }
 p{
-color: #72179c;
-margin-left: 20px;
-margin-right: 20px;
-text-align: center;
+    color: #72179c;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
 }
+
 /*navigatie*/
 a{
-text-decoration: none;
-color: #F4FFF3;
-text-transform: uppercase;
-font-size: 14px;
-margin-right: 0; 
-margin-left: 20px;
-margin-top: 20px;
-
+    text-decoration: none;
+    color: #F4FFF3;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 0; 
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 
 .navbar{
-display: flex;
-justify-content:space-between;
-align-items: center; 
-background-color: #6e069f;
-padding-bottom: 12px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+    background-color: #6e069f;
+    padding-bottom: 12px;
 
 }
 
@@ -57,21 +62,21 @@ canvas {
     margin: 0 auto; 
     border: 2px solid #ccc;
     background-color: white;
-    width: 30%; /* Neem 90% van de beschikbare breedte in op kleinere schermen */
-    height: auto; /* Behoud de aspect ratio */
-    max-width: 340px; /* Maximaal 640px breedte voor het canvas */
+    width: 30%; 
+    height: auto; 
+    max-width: 340px; 
 }
 
 @media (max-width: 768px) {
     canvas {
-        width: 80%; /* Neem 80% van de beschikbare breedte in op kleinere schermen */
-        max-width: 480px; /* Maximaal 480px breedte voor het canvas op kleinere schermen */
+        width: 80%; 
+        max-width: 480px; 
     }
 }
 
 @media (min-width: 769px) {
     canvas {
-        width: 50%; /* Neem 50% van de beschikbare breedte in op grotere schermen */
-        max-width: 800px; /* Maximaal 800px breedte voor het canvas op grotere schermen */
+        width: 50%; 
+        max-width: 800px; 
     }
 }
