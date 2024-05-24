@@ -86,8 +86,8 @@ class Ball {
         this.y = y;
         this.size = s;
         this.color = c;
-        this.xSpeed = 5;
-        this.ySpeed = -5;
+        this.xSpeed = 8;
+        this.ySpeed = -8;
     }
 
     show() {
