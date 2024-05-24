@@ -14,13 +14,16 @@ canvas {
 }
 #motion{
   position:absolute;
-  height:3vh; 
+  height:5vh; 
+  margin-left: 30px;
+  font-size: 30px;
 }
 
 #start {
   position: absolute;
   top: 50%; 
   left: 50%; 
+  font-size: 25px;
   transform: translate(-50%, -50%);
   background-color:#6e069f;
   border: 3px solid #6e069f;
@@ -28,7 +31,7 @@ canvas {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 3px;
-  width: 150px;
+  width: 290px;
   text-align: center;
   font-weight: bold;
   cursor: pointer;
@@ -90,6 +93,7 @@ div{
   display: flex;
   flex-direction: column;
 }
+
 /*navigatie*/
 a{
   text-decoration: none;
@@ -113,3 +117,16 @@ a{
 
 
 
+h1{
+  color: #72179c;
+  text-align: center;
+ 
+
+}
+
+p{
+  color: #72179c;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}

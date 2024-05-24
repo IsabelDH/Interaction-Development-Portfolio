@@ -1,7 +1,7 @@
 document.getElementById('motion').onclick = requestMotionPermission;
 let deltaX = 0;
 const w = window.innerWidth;
-const h = window.innerHeight;
+const h = window.innerHeight /1.2;
 const beginX = w / 2;
 const beginY = h / 2;
 let ball;
@@ -10,14 +10,14 @@ let bricks = [];
 let rows = 5;
 let cols = 8;
 let brickWidth = w / cols;
-let brickHeight = 20;
+let brickHeight = 45;
 let score = 0;
 let gameStarted = false;
 
 function setup() {
     createCanvas(w, h);
-    ball = new Ball(beginX, beginY, 20, "#6e069f");
-    paddle = new Paddle(w / 2, h - 50, 100, 10);
+    ball = new Ball(beginX, beginY, 40, "#6e069f");
+    paddle = new Paddle(w / 2, h  - 30, 180, 35);
     for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
             bricks.push(new Brick(j * brickWidth, i * brickHeight));
@@ -50,16 +50,17 @@ function draw() {
         }
 
         if (ball.y + ball.size / 2 > height) {
-            textSize(32);
-            fill(0);
+            textSize(42);
+            fill('#9520D0');
             textAlign(CENTER);
             text('Game Over!', width / 2, height / 2);
-            noLoop();  // Stop the draw loop
+            noLoop();  
         }
+        
 
-        textSize(19);
-        fill(0);
-        text(`Score: ${score}`, width / 2, 120);
+        textSize(29);
+        fill('#9520D0');
+        text(`Score: ${score}`, width / 2, 310);
     }
 }
 
@@ -71,23 +72,9 @@ document.addEventListener('DOMContentLoaded', function () {
 function startGame() {
     gameStarted = true;
     document.querySelector('#start').style.display = 'none';
-    document.querySelector('#restart').style.display = 'none';
     loop();
 }
 
-function restartGame() {
-    score = 0; // Reset the score
-    bricks = []; // Clear the bricks array
-    // Reinitialize bricks
-    for (let i = 0; i < rows; i++) {
-        for (let j = 0; j < cols; j++) {
-            bricks.push(new Brick(j * brickWidth, i * brickHeight));
-        }
-    }
-    gameStarted = true; // Set game state to started
-    document.querySelector('#restart').style.display = 'none'; // Hide the restart button
-    loop(); // Start the game loop
-}
 
 function handleOrientation(event) {
     deltaX = map(event.gamma, -30, 30, -10, 10);
@@ -99,8 +86,8 @@ class Ball {
         this.y = y;
         this.size = s;
         this.color = c;
-        this.xSpeed = 5;
-        this.ySpeed = -5;
+        this.xSpeed = 4;
+        this.ySpeed = -4;
     }
 
     show() {
@@ -149,7 +136,6 @@ class Paddle {
 
     move(deltaX) {
         this.x += deltaX;
-        // Ensure the paddle stays within the screen boundaries
         if (this.x - this.width / 2 < 0) {
             this.x = this.width / 2;
         }
