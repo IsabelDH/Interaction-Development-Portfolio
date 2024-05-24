@@ -1,11 +1,11 @@
 let questions = [
     { question: "What is 2 + 2?", answer: "Four" },
-    // { question: "How many liters of water should you drink per day?", answer: "Two" },
-    // { question: "Where is Disneyland located in Europe?", answer: "Paris" },
-    // { question: "What is the capital of Belgium?", answer: "Brussels" },
-    // { question: "What is the capital of Germany?", answer: "Berlin" },
-    // { question: "How many continents are there?", answer: "Seven" },
-    // { question: "Who painted the Mona Lisa?", answer: "Leonardo da Vinci" }
+    { question: "How many liters of water should you drink per day?", answer: "Two" },
+    { question: "Where is Disneyland located in Europe?", answer: "Paris" },
+    { question: "What is the capital of Belgium?", answer: "Brussels" },
+    { question: "What is the capital of Germany?", answer: "Berlin" },
+    { question: "How many continents are there?", answer: "Seven" },
+    { question: "Who painted the Mona Lisa?", answer: "Leonardo da Vinci" }
     
 ];
 
