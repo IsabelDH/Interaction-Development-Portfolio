@@ -94,6 +94,10 @@ main{
     margin-top: 20px;
   }
 
+  #finishMessage{
+    margin-bottom: 10px;
+    
+  }
 
   /*navigatie*/
 a{

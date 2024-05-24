@@ -1,11 +1,11 @@
 let questions = [
     { question: "What is 2 + 2?", answer: "Four" },
-    { question: "How many liters of water should you drink per day?", answer: "Two" },
-    { question: "Where is Disneyland located in Europe?", answer: "Paris" },
-    { question: "What is the capital of Belgium?", answer: "Brussels" },
-    { question: "What is the capital of Germany?", answer: "Berlin" },
-    { question: "How many continents are there?", answer: "Seven" },
-    { question: "Who painted the Mona Lisa?", answer: "Leonardo da Vinci" }
+    // { question: "How many liters of water should you drink per day?", answer: "Two" },
+    // { question: "Where is Disneyland located in Europe?", answer: "Paris" },
+    // { question: "What is the capital of Belgium?", answer: "Brussels" },
+    // { question: "What is the capital of Germany?", answer: "Berlin" },
+    // { question: "How many continents are there?", answer: "Seven" },
+    // { question: "Who painted the Mona Lisa?", answer: "Leonardo da Vinci" }
     
 ];
 
@@ -17,6 +17,7 @@ let speakQuestionButton = document.querySelector('#speakQuestionButton');
 let answerButton = document.querySelector('#answerButton');
 let nextButton = document.querySelector('#nextButton');
 let replayButton = document.querySelector('#replayButton');
+let finishMessageElement = document.querySelector('#finishMessage');
 
 let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 let recognition = new SpeechRecognition();
@@ -72,6 +73,10 @@ nextButton.addEventListener('click', function() {
         questionElement.style.display = 'inline-block';
         nextButton.style.display = 'none';
     } else {
+        finishMessageElement.textContent = 'Good job! The quiz is finished!!!';
+        finishMessageElement.style.color = "#6e069f";
+        finishMessageElement.style.fontSize = "23px";
+        finishMessageElement.style.display = 'block';
         speakQuestionButton.disabled = true;
         answerButton.disabled = true;
         nextButton.style.display = 'none';
@@ -82,8 +87,8 @@ nextButton.addEventListener('click', function() {
 replayButton.addEventListener('click', function() {
     currentQuestionIndex = 0;
     resultElement.textContent = '';
-    questionElement.textContent = 'Good job! The quiz is finished!!!';
-    questionElement.style.color = "#6e069f";
+    questionElement.textContent = questions[currentQuestionIndex].question;
+    finishMessageElement.style.display = 'none';
     speakQuestionButton.style.display = 'inline-block';
     answerButton.style.display = 'inline-block';
     questionElement.style.display = 'inline-block';
